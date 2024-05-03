@@ -15,6 +15,7 @@ public class TorpedoStore {
   private int torpedoCount = 0;
 
   public TorpedoStore(int numberOfTorpedos){
+    generator= new Random();
     this.torpedoCount = numberOfTorpedos;
 
     // update failure rate if it was specified in an environment variable
@@ -27,7 +28,7 @@ public class TorpedoStore {
       }
     }
   }
-  private Random generator = new Random();
+  private Random generator;
   public boolean fire(int numberOfTorpedos){
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
       throw new IllegalArgumentException("numberOfTorpedos");
