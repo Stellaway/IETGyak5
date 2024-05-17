@@ -1,0 +1,7 @@
+primary is empty at first, single fire => 	have to fire secondary.
+primary and secondary are empty, single fire => none have been fired.
+primary reports failure, single fire =>		secondary hasn't been fired.
+single fire three times =>			fired primary twice, secondary once
+secondary empty, single fire twice =>		fired primary twice, secondary never
+
+primary fired once, then it is empty, secondary empty too => primary fired once, secondary never
